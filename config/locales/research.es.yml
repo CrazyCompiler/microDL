@@ -1,0 +1,10 @@
+es:
+  hyrax:
+    icons:
+      research:     'fa fa-file-text-o'
+    select_type:
+      research:
+        # TODO: translate `human_name` into Spanish
+        description:        "Research trabajos"
+        name:               "Research"
+        # TODO: translate `human_name` into Spanish

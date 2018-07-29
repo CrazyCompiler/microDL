@@ -1,0 +1,8 @@
+de:
+  hyrax:
+    icons:
+      research:     'fa fa-file-text-o'
+    select_type:
+      research:
+        description:        "Research Werke"
+        name:               "Research"
