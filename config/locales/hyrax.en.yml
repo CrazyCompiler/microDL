@@ -56,3 +56,10 @@ en:
     institution_name_full: E4R
     product_name: Engineering For Research
     product_twitter_handle: ""
+  simple_form:
+    hints:
+      defaults:
+        related_url: A link to related work.
+    labels:
+      defaults:
+        related_url: Related Works
