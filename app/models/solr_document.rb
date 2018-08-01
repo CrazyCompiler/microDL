@@ -9,6 +9,18 @@ class SolrDocument
 
   # self.unique_key = 'id'
 
+  def related_works
+    relatedWorksIDS = self[Solrizer.solr_name('related_url')]
+    relatedWorks = []
+
+    for workID in relatedWorksIDS
+      found_work = GenericWork.find(workID)
+      relatedWorks << found_work
+    end
+
+    return relatedWorks
+  end
+
   # Email uses the semantic field mappings below to generate the body of an email.
   SolrDocument.use_extension(Blacklight::Document::Email)
 
