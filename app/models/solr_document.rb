@@ -10,15 +10,14 @@ class SolrDocument
   # self.unique_key = 'id'
 
   def related_works
-    relatedWorksIDS = self[Solrizer.solr_name('related_url')]
-    relatedWorks = []
-
-    for workID in relatedWorksIDS
-      found_work = GenericWork.find(workID)
-      relatedWorks << found_work
+    related_works_IDS = self[Solrizer.solr_name('related_url')]
+    related_works = []
+    for workID in related_works_IDS
+      found_work = SolrDocument.find(workID)
+      related_works << found_work
     end
 
-    return relatedWorks
+    return related_works
   end
 
   # Email uses the semantic field mappings below to generate the body of an email.
