@@ -12,9 +12,11 @@ class SolrDocument
   def related_works
     related_works_IDS = self[Solrizer.solr_name('related_url')]
     related_works = []
-    for workID in related_works_IDS
-      found_work = SolrDocument.find(workID)
-      related_works << found_work
+    if related_works_IDS.kind_of?(Array)
+      for workID in related_works_IDS
+        found_work = SolrDocument.find(workID)
+        related_works << found_work
+      end
     end
 
     return related_works
