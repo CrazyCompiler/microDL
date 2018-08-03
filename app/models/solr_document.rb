@@ -14,8 +14,13 @@ class SolrDocument
     related_works = []
     if related_works_IDS.kind_of?(Array)
       for workID in related_works_IDS
-        found_work = SolrDocument.find(workID)
-        related_works << found_work
+        begin
+          found_work = SolrDocument.find(workID)
+          related_works << found_work
+        rescue
+          puts "[solr_document] No work found of id : #{workID}"
+        end
+
       end
     end
 
