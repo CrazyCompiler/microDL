@@ -46,6 +46,7 @@ module Hyrax
             work.update({"related_url" => related_urls})
             work.save!
           end
+
         end
       end
     end

@@ -20,7 +20,6 @@ class SolrDocument
         rescue
           puts "[solr_document] No work found of id : #{workID}"
         end
-
       end
     end
 
