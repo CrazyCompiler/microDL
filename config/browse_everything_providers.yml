@@ -3,10 +3,10 @@
 # The file_system provider can be a path to any directory on the server where your application is running.
 #
 file_system:
-  home: /Users/in-virajp/projects/E4R_exp/hyrax/.internal_test_app
-# dropbox:
-#   app_key: YOUR_DROPBOX_APP_KEY
-#   app_secret: YOUR_DROPBOX_APP_SECRET
+  home: /Users/in-virajp/projects/E4R_exp/microDL
+#  dropbox:
+#    app_key:
+#    app_secret: 
 # box:
 #   client_id: YOUR_BOX_CLIENT_ID
 #   client_secret: YOUR_BOX_CLIENT_SECRET
