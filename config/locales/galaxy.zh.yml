@@ -1,10 +1,10 @@
 zh:
   hyrax:
     icons:
-      research:     'fa fa-file-text-o'
+      galaxy:     'fa fa-file-text-o'
     select_type:
-      research:
+      galaxy:
         # TODO: translate `human_name` into Chinese
-        description:        "Research 作品"
-        name:               "Research"
+        description:        "Galaxy 作品"
+        name:               "Galaxy"
         # TODO: translate `human_name` into Chinese

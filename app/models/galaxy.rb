@@ -1,9 +1,9 @@
 # Generated via
-#  `rails generate hyrax:work Research`
-class Research < ActiveFedora::Base
+#  `rails generate hyrax:work Galaxy`
+class Galaxy < ActiveFedora::Base
   include ::Hyrax::WorkBehavior
 
-  self.indexer = ResearchIndexer
+  self.indexer = GalaxyIndexer
   # Change this to restrict which works can be added as a child.
   # self.valid_child_concerns = []
   validates :title, presence: { message: 'Your work must have a title.' }

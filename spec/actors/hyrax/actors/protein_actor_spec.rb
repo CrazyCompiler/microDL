@@ -1,8 +1,8 @@
 # Generated via
-#  `rails generate hyrax:work Research`
+#  `rails generate hyrax:work Protein`
 require 'rails_helper'
 
-RSpec.describe Hyrax::ResearchesController do
+RSpec.describe Hyrax::Actors::ProteinActor do
   it "has tests" do
     skip "Add your tests here"
   end

@@ -1,0 +1,8 @@
+en:
+  hyrax:
+    icons:
+      galaxy:     'fa fa-file-text-o'
+    select_type:
+      galaxy:
+        description:        "Galaxy works"
+        name:               "Galaxy"

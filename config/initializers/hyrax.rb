@@ -8,8 +8,10 @@ Hyrax.config do |config|
   config.register_curation_concern :generic_work
   # Injected via `rails g hyrax:work NamespacedWorks::NestedWork`
   config.register_curation_concern :"namespaced_works/nested_work"
-  # Injected via `rails g hyrax:work Research`
-  config.register_curation_concern :research
+  # Injected via `rails g hyrax:work Protein`
+  config.register_curation_concern :protein
+  # Injected via `rails g hyrax:work Galaxy`
+  config.register_curation_concern :galaxy
   # Register roles that are expected by your implementation.
   # @see Hyrax::RoleRegistry for additional details.
   # @note there are magical roles as defined in Hyrax::RoleRegistry::MAGIC_ROLES
@@ -94,14 +96,14 @@ Hyrax.config do |config|
   # config.redis_namespace = "hyrax"
 
   # Path to the file characterization tool
-  # config.fits_path = "fits.sh"
+  config.fits_path = "fits"
 
   # Path to the file derivatives creation tool
-  # config.libreoffice_path = "soffice"
+  config.libreoffice_path = "soffice"
 
   # Option to enable/disable full text extraction from PDFs
   # Default is true, set to false to disable full text extraction
-  # config.extract_full_text = true
+  config.extract_full_text = true
 
   # How many seconds back from the current time that we should show by default of the user's activity on the user's dashboard
   # config.activity_to_show_default_seconds_since_now = 24*60*60
@@ -183,7 +185,7 @@ Hyrax.config do |config|
   # config.audit_user_key = 'audituser@example.com'
   #
   # The banner image. Should be 5000px wide by 1000px tall
-  # config.banner_image = 'https://cloud.githubusercontent.com/assets/92044/18370978/88ecac20-75f6-11e6-8399-6536640ef695.jpg'
+  config.banner_image = 'https://images.unsplash.com/photo-1457092716468-97352752b749?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4c1e1be84881e0d22854beea0529a1f4&auto=format&fit=crop&w=986&q=80'
 
   # Temporary paths to hold uploads before they are ingested into FCrepo
   # These must be lambdas that return a Pathname. Can be configured separately

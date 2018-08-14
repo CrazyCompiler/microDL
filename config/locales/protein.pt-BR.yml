@@ -1,0 +1,8 @@
+pt-BR:
+  hyrax:
+    icons:
+      protein:     'fa fa-file-text-o'
+    select_type:
+      protein:
+        description:        "Protein trabalhos"
+        name:               "Protein"

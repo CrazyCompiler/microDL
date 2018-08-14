@@ -1,0 +1,8 @@
+it:
+  hyrax:
+    icons:
+      protein:     'fa fa-file-text-o'
+    select_type:
+      protein:
+        description:        "Protein opere"
+        name:               "Protein"

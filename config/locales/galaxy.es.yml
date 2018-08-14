@@ -1,10 +1,10 @@
 es:
   hyrax:
     icons:
-      research:     'fa fa-file-text-o'
+      galaxy:     'fa fa-file-text-o'
     select_type:
-      research:
+      galaxy:
         # TODO: translate `human_name` into Spanish
-        description:        "Research trabajos"
-        name:               "Research"
+        description:        "Galaxy trabajos"
+        name:               "Galaxy"
         # TODO: translate `human_name` into Spanish
