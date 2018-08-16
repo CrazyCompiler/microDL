@@ -102,6 +102,30 @@ class SolrDocument
     self[Solrizer.solr_name('nbalkan')]
   end
 
+  def entry
+    self[Solrizer.solr_name('entry')]
+  end
+
+  def entry_name
+    self[Solrizer.solr_name('entry_name')]
+  end
+
+  def protein_name
+    self[Solrizer.solr_name('protein_name')]
+  end
+
+  def gene_name
+    self[Solrizer.solr_name('gene_name')]
+  end
+
+  def organism
+    self[Solrizer.solr_name('organism')]
+  end
+
+  def length
+    self[Solrizer.solr_name('length')]
+  end
+
   # Email uses the semantic field mappings below to generate the body of an email.
   SolrDocument.use_extension(Blacklight::Document::Email)
 
