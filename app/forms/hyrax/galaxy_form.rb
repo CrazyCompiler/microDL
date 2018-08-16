@@ -4,6 +4,7 @@ module Hyrax
   # Generated form for Galaxy
   class GalaxyForm < Hyrax::Forms::WorkForm
     self.model_class = ::Galaxy
-    self.terms += [:resource_type]
+    self.terms += [:resource_type, :index, :run, :rerun, :camcol, :field, :mjd, :ra, :dec,
+                   :node, :incl, :xbore, :mu_start, :mu_end, :nu_start, :nu_end, :xbin, :ybin, :ifindx, :nbalkan]
   end
 end

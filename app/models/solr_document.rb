@@ -26,6 +26,82 @@ class SolrDocument
     return related_works
   end
 
+  def index
+    self[Solrizer.solr_name('index')]
+  end
+
+  def run
+    self[Solrizer.solr_name('run')]
+  end
+
+  def rerun
+    self[Solrizer.solr_name('rerun')]
+  end
+
+  def camcol
+    self[Solrizer.solr_name('camcol')]
+  end
+
+  def field
+    self[Solrizer.solr_name('field')]
+  end
+
+  def mjd
+    self[Solrizer.solr_name('mjd')]
+  end
+
+  def ra
+    self[Solrizer.solr_name('ra')]
+  end
+
+  def dec
+    self[Solrizer.solr_name('dec')]
+  end
+
+  def node
+    self[Solrizer.solr_name('node')]
+  end
+
+  def incl
+    self[Solrizer.solr_name('incl')]
+  end
+
+  def xbore
+    self[Solrizer.solr_name('xbore')]
+  end
+
+  def mu_start
+    self[Solrizer.solr_name('mu_start')]
+  end
+
+  def mu_end
+    self[Solrizer.solr_name('mu_end')]
+  end
+
+  def nu_start
+    self[Solrizer.solr_name('nu_start')]
+  end
+
+  def nu_end
+    self[Solrizer.solr_name('nu_end')]
+  end
+
+  def xbin
+    self[Solrizer.solr_name('xbin')]
+  end
+
+  def ybin
+    self[Solrizer.solr_name('ybin')]
+  end
+
+  def ifindx
+    self[Solrizer.solr_name('ifindx')]
+  end
+
+  def nbalkan
+    self[Solrizer.solr_name('nbalkan')]
+  end
+
   # Email uses the semantic field mappings below to generate the body of an email.
   SolrDocument.use_extension(Blacklight::Document::Email)
 
