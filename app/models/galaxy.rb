@@ -11,6 +11,10 @@ class Galaxy < ActiveFedora::Base
     index.as :stored_searchable, :facetable
   end
 
+  property :related_works, predicate: ::RDF::URI.new("http://lib.my.edu/related_works"), multiple: true do |index|
+    index.as :stored_searchable, :facetable
+  end
+
   property :run, predicate: ::RDF::URI.new("http://lib.my.edu/run"), multiple: false do |index|
     index.as :stored_searchable, :facetable
   end

@@ -8,6 +8,11 @@ class Protein < ActiveFedora::Base
   # self.valid_child_concerns = []
   validates :title, presence: { message: 'Your work must have a title.' }
 
+
+  property :related_works, predicate: ::RDF::URI.new("http://lib.my.edu/related_works"), multiple: true do |index|
+    index.as :stored_searchable, :facetable
+  end
+
   property :entry, predicate: ::RDF::URI.new("http://lib.my.edu/entry"), multiple: false do |index|
     index.as :stored_searchable, :facetable
   end

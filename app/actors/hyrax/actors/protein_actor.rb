@@ -19,31 +19,31 @@ module Hyrax
       def remove_non_related_works(env)
         current_work_ID = env.curation_concern.id
         current_work = ::ActiveFedora::Base.find(current_work_ID)
-        current_related_urls = current_work.attributes().values_at("related_url")
-        current_related_urls = current_related_urls.to_a[0].to_a
-        related_work_diff = current_related_urls - env.attributes["related_url"]
+        current_related_work = current_work.attributes().values_at("related_works")
+        current_related_work = current_related_work.to_a[0].to_a
+        related_work_diff = current_related_work - env.attributes["related_works"]
 
         for work_ID in related_work_diff
-          related_work = ::ActiveFedora::Base.find(work_ID)
-          related_urls = related_work.attributes().values_at("related_url")
-          related_urls = related_urls.to_a[0].to_a
-          related_urls.delete(current_work_ID)
-          related_work.update({"related_url" => related_urls})
-          related_work.save!
+          related_works = ::ActiveFedora::Base.find(work_ID)
+          related_works = related_works.attributes().values_at("related_works")
+          related_works = related_works.to_a[0].to_a
+          related_works.delete(current_work_ID)
+          related_works.update({"related_works" => related_works})
+          related_works.save!
         end
 
       end
 
       def update_related_works(env)
         current_work_ID = env.curation_concern.id
-        related_work_ids = env.attributes["related_url"]
+        related_work_ids = env.attributes["related_works"]
         for work_ID in related_work_ids
           work = ::ActiveFedora::Base.find(work_ID)
-          related_urls = work.attributes().values_at("related_url")
-          related_urls = related_urls.to_a[0].to_a
-          unless related_urls.include? current_work_ID
-            related_urls << current_work_ID
-            work.update({"related_url" => related_urls})
+          related_works = work.attributes().values_at("related_works")
+          related_works = related_works.to_a[0].to_a
+          unless related_works.include? current_work_ID
+            related_works << current_work_ID
+            work.update({"related_works" => related_works})
             work.save!
           end
 

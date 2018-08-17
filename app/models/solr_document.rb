@@ -10,7 +10,7 @@ class SolrDocument
   # self.unique_key = 'id'
 
   def related_works
-    related_works_IDS = self[Solrizer.solr_name('related_url')]
+    related_works_IDS = self[Solrizer.solr_name('related_works')]
     related_works = []
     if related_works_IDS.kind_of?(Array)
       for workID in related_works_IDS
